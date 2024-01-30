@@ -493,8 +493,9 @@ export default class Transport {
         if (this[kProductCheck] != null && headers['x-elastic-product'] !== this[kProductCheck] && statusCode >= 200 && statusCode < 300) {
           /* eslint-disable @typescript-eslint/prefer-ts-expect-error */
           // @ts-ignore
-          pass;
-          //throw new ProductNotSupportedError(this[kProductCheck], result, errorOptions)
+          // eslint-disable-next-line no-unused-expressions
+          pass
+          // throw new ProductNotSupportedError(this[kProductCheck], result, errorOptions)
           /* eslint-enable @typescript-eslint/prefer-ts-expect-error */
         }
 
